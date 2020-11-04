@@ -14,8 +14,15 @@
         //alert("Wpisałeś " + leng + " znak/znaki/znaków32");
 
         //Znak na danej pozycji
-        console.log(text.charAt(0)); //A
-        console.log(text.charAt(4)); //m
+        //console.log(text.charAt(0)); //A
+        //console.log(text.charAt(4)); //m
+        const search = text.indexOf(text);
+        if(search=0){
+            alert("Mamy takie coś" + text);
+        }
+        else{
+            alert("Brak znaku");
+        }
     </script>
 </body>
 </html>
