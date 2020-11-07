@@ -10,25 +10,25 @@
         
         //Metoda "Lenght"
         const text = prompt("Wpowadź tekst");
-        //const leng = text.length;
-        //alert("Wpisałeś " + leng + " znak/znaki/znaków");
+        const leng = text.length;
+        alert("Wpisałeś " + leng + " znak/znaki/znaków");
 
         //Znak na danej pozycji
-        //console.log(text.charAt(0)); //A
-        //console.log(text.charAt(4)); //m
+        console.log(text.charAt(0)); //A
+        console.log(text.charAt(4)); //m
        
         //Pozycja tekstu
-        //const search = text.indexOf(text);
-        //if(search>=0){
-        //    alert("Mamy taki oto ciąg: " + text);
-        //}
-        //else{
-        //    alert("Brak znaku");
-        //}
+        const search = text.indexOf(text);
+        if(search>=0){
+            alert("Mamy taki oto ciąg: " + text);
+        }
+        else{
+            alert("Brak znaku");
+        }
 
         //Upper case
         console.log(text.toUpperCase()); //wyświetli cały tekst z wielkich liter
-        alert("Taki tekst: " + text);
+        console.log(text.toLowerCase()); //Wyświetli cały tekst z małych liter
     </script>
 </body>
 </html>
