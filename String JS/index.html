@@ -45,6 +45,32 @@
         console.log(text);
 
         console.log("\uD83D\uDE91");
+
+        //pętla po tekście
+        const text = "siemeczko";
+
+        for (let i = 0; i< TextTrackCueList.length; i++) {
+          console.log(text[i]);
+        }
+        for (const el of txt){
+            console.log(el);
+        }
+
+        //powtórzenie tekstu
+        const text = "rybka";
+        console.log(text.repeat(3)); //rybkarybkarybka
+        "-".repeat(10); //----------
+
+        const text = "Łukasz ma rybkę";
+
+        text.startWith("ma"); //true
+        text.startWith("Ma"); //False
+
+        text.endsWith("rybkę"); //true
+        text.endsWith("Rybkę"); //false
+
+        const text = text.replace("rybkę", "owoc"); //zamiana tekstu rybkę w owoca
+        console.log(text);
     </script>
 </body>
 </html>
