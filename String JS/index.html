@@ -8,7 +8,7 @@
 <body>
     <script>
         
-        //Metoda "Lenght"
+        //Wyświetlanie długości textu
         const text = prompt("Wpowadź tekst");
         const leng = text.length;
         alert("Wpisałeś " + leng + " znak/znaki/znaków");
@@ -26,9 +26,17 @@
             alert("Brak znaku");
         }
 
-        //Upper case
+        //Upper and lower case
         console.log(text.toUpperCase()); //wyświetli cały tekst z wielkich liter
         console.log(text.toLowerCase()); //Wyświetli cały tekst z małych liter
+
+        const tab = [...text2];
+        tab[0] = "C";
+        const text = tab.join("");
+        console.log(text); //podmieni literkę a na c
+
+        const text = "Ala ma kota"; //teskt w cudzysłowiach
+        const text = 'Łukasz ma rybę'; //tekst w apostrofach
     </script>
 </body>
 </html>
