@@ -8,11 +8,19 @@
 <body>
     <script>
         //zad 1
-        const tab = ["Marcin", "Agnieszka", 1, 2, 3, "Marek", "Łukasz", 6, 7, 8];
-        console.log(tab);
+        const tab1 = ["Marcin", "Agnieszka", 1, 2, 3, "Marek", "Łukasz", 6, 7, 8];
+        console.log(tab1);
 
         //zad 2
-        
+        const tab2 = tab1.length;
+        console.log(tab2);
+        let tab3 = [];
+        for(let a=0; a<tab2; a++){
+            tab3.push(tab1[tab2-a-1]);
+        }
+        console.log(tab3);
+
+
     </script>
     
 </body>
