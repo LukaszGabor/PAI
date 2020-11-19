@@ -39,8 +39,14 @@
         console.log(tab6);
 
         //zad 4
-        const tab7 = prompt("Wprowadź 5 liczb: ");
-        console.log(tab7);
+        const tab7 = [];
+        for(let c=1; c<=5; c++){
+            let tab8 = prompt(c + " Liczba: ");
+            tab7.unshift(tab8);
+        }
+        for(let d=0; d<5; d++){
+            console.log((d+1) + ", " + tab7[c]);
+        }
     </script>
     
 </body>
