@@ -8,10 +8,12 @@
 <body>
     <script>
         //zad 1
+        console.log("Zad 1");
         const tab1 = ["Marcin", "Agnieszka", 1, 2, 3, "Marek", "Łukasz", 6, 7, 8];
         console.log(tab1);
 
         //zad 2
+        console.log("Zad 2");
         const tab2 = tab1.length;
         console.log(tab2);
         let tab3 = [];
@@ -21,6 +23,7 @@
         console.log(tab3);
 
         //zad 3
+        console.log("Zad 3");
         const tab4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
         const tab5 = tab4.length;
         const tab6 = [];
@@ -39,6 +42,7 @@
         console.log(tab6);
 
         //zad 4
+        console.log("Zad 4");
         const tab7 = [];
         for(let c=1; c<=5; c++){
             let tab8 = prompt(c + " Liczba: ");
@@ -49,9 +53,20 @@
         }
 
         //zad 5
+        console.log("Zad 5");
         const tab9 = tab6.concat(tab7);
         for(let e=0; e<tab6.length + tab7.length; e++){
             console.log(tab9[e]);
+        }
+
+        //zad 6
+        console.log("Zad 6");
+        function sortowanie(f,g){
+            return f-g
+        }
+        const tab10 = tab9.sort(sortowanie);
+        for(let h=0; h<tab10.length; h++){
+            console.log(tab10[h]);
         }
     </script>
     
