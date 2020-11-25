@@ -5,10 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Łukasz">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
     <title>DOM JS</title>
 </head>
 <body>
-
+    <div class="container">
+        <header>
+            <h1 id="titleDoc"></h1>
+        </header>
+        <aside>
+            <article class="artAs"></article>
+            <article class="artAs"></article>
+            <article class="artAs"></article>
+            <article class="artAs"></article>
+        </aside>
+        <main>
+            <article id="art1"></article>
+            <article id="art2"></article>
+            <article id="art3"></article>
+            <article id="art4"></article>
+        </main>
+        <form action="#">
+            <fieldset>
+                <legend>Pola wyboru</legend>
+                <label for="wybor1">Wybór 1: <input type="radio" name="wybor" id="wybor1"></label>
+                <label for="wybor2">Wybór 2: <input type="radio" name="wybor" id="wybor2"></label>
+                <label for="wybor3">Wybór 3: <input type="radio" name="wybor" id="wybor3"></label>
+                <label for="wybor4">Wybór 4: <input type="radio" name="wybor" id="wybor4"></label>
+                <label for="wybor5">Wybór 5: <input type="radio" name="wybor" id="wybor5"></label>
+            </fieldset>
+        </form>
+        <footer></footer>
+    </div>
 </body>
+<script>
+    const titleDoc = document.getElementById('titleDoc');
+    const wybor3 = document.getElementById('wybor3');
+    const artsAside = document.getElementsByClassName('artAs');
+    const wybory = document.getElementsByName('wybor');
+    const h1Title = document.getElementsByTagName('h1');
+
+    console.log(titleDoc);
+    console.log(wybor3);
+    console.log(artsAside);
+    console.log(wybory);
+    console.log(h1Title);
+
+    titleDoc.innerText = 'Hello World';
+    wybor3.checked = true;
+
+    for (let i=0; i<artsAside.length; i++){
+        console.log(artsAside[i]);
+        artsAside[i].innerText = `Artykuł nr ${i + 1}`;
+        artsAside[i].style.color = '#f00';
+        artsAside[i].style.backgroundColor = '#ff0';
+    }
+
+    for (let i = 0; i<wybory.length; i++){
+        if(wybory[i].checked){
+            console.log(wybory[i]);
+        }
+    }
+</script>
 </html>
