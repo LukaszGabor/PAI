@@ -13,11 +13,24 @@
 
         alert("Podaj poprawne liczby!");
 
-        num1 = prompt("Podaj pierwszą liczbę");
+        num1 = prompt("Podaj pierwszą liczbę: ");
         num1 = parseInt(num1);
         while(isNaN(num1)){
             alert("To nie jest liczba!");
-            num1 = parseInt(prompt("Podaj poprawnie pierwszą liczbę!"));
+            num1 = parseInt(prompt("Podaj poprawnie pierwszą liczbę!: "));
+        }
+
+        num2 = prompt("Podaj drugą liczbę: ");
+        num2 = parseInt(num2);
+        while(isNaN(num2)){
+            alert("To nie jest liczba");
+            num2 = parseInt(prompt("Podaj poprawnie drugą liczbę: "));
+        }
+
+        znak = prompt("Podaj działanie: '+' '-' '*' '/' ");
+        while(znak!="+" && znak!="-" && znak!="*" && znak!="/"){
+            alert("To nie jest działanie matematyczne!");
+            znak = prompt("Podaj działanie: '+' '-' '*' '/'");
         }
     </script>
 </body>
