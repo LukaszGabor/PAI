@@ -7,7 +7,18 @@
 </head>
 <body>
     <script>
-        
+        let num1;
+        let num2;
+        let znak;
+
+        alert("Podaj poprawne liczby!");
+
+        num1 = prompt("Podaj pierwszą liczbę");
+        num1 = parseInt(num1);
+        while(isNaN(num1)){
+            alert("To nie jest liczba!");
+            num1 = parseInt(prompt("Podaj poprawnie pierwszą liczbę!"));
+        }
     </script>
 </body>
 </html>
