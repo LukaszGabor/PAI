@@ -32,6 +32,26 @@
             alert("To nie jest działanie matematyczne!");
             znak = prompt("Podaj działanie: '+' '-' '*' '/'");
         }
+
+        switch(znak){
+            case "+":
+                alert("Suma liczb " + num1 + " i " + num2 + " Wynosi: " + (num1+num2));
+                break;
+            case "-":
+                alert("Różnica liczb " + num1 + " i " + num2 + " Wynosi: " + (num1-num2));
+                break;
+            case "*":
+                alert("Iloczyn liczb " + num1 + " i " + num2 + " Wynosi: " + (num1*num2));
+                break;
+            case "/":
+            if(num2==0){
+                alert("Nie wolno dzielić przez 0");
+            }
+            else{
+                alert("Iloraz liczb " + num1 + " i " + num2 + " Wynosi: " + (num1/num2));
+            }
+            break;
+        }
     </script>
 </body>
 </html>
