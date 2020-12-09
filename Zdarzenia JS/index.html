@@ -6,18 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="color">Podaj kolor: <input type="text" id="color"></label>
+    <label for="color1">Podaj liczbe od 0 do 255 <input type="number" id="color1" max="255" min="0"></label>
+    <label for="color2">Podaj liczbe od 0 do 255 <input type="number" id="color2" max="255" min="0"></label>
+    <label for="color3">Podaj liczbe od 0 do 255 <input type="number" id="color3" max="255" min="0"></label>
     <button>Zmień Kolor</button>
     <p id="wynik">Tekst</p>
     <script>
-        const color = document.querySelector('#color');
+        const color = document.querySelectorAll('input');
         const button = document.querySelector('button');
-        const wynik = document.getElementById('wynik');
+        const wynik = document.getElementById('#wynik');
+        console.log(color);
 
-        button.addEventListener('click', changeColor);
+        button.addEventListener("click", changeColor);
 
         function changeColor(){
-            wynik.style.color = color.value;
+            wynik.style.color = `rgb(${color[0].value},${color[1].value},${color[2].value})`;
         }
     </script>
     
