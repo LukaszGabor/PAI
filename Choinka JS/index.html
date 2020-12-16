@@ -9,7 +9,8 @@
 <body>
     <label for="wysokosc">Podaj wysokość choinki: <input type="text" name="wysokosc" id="wysokosc" value="12"></label>
     <button id="button">Potwierdź</button>
-    <button id="color">Zmień kolor</button>
+    <input type="color" id="color">
+    <button id="przycisk">Zmień kolor</button>
     <section><p></p></section>
 
     <script>
@@ -17,7 +18,8 @@
         const wysokosc = document.getElementById('wysokosc');
         const button = document.getElementById('button');
         const output = document.querySelector("p");
-        const color = document.getElementById('#color');
+        const guzik = document.getElementById('przycisk');
+        const color = document.getElementById('color');
         button.addEventListener("click", zmianawysokosc);
         button.addEventListener("click", changeColor);
 
@@ -41,7 +43,7 @@
         output.innerHTML = tree;
         }
         function changeColor(){
-
+            output.style.color = color.value;
         }
     </script>
 
