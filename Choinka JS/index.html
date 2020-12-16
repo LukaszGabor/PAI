@@ -16,12 +16,12 @@
     <script>
         
         const wysokosc = document.getElementById('wysokosc');
-        const button = document.getElementById('button');
+        const button1 = document.getElementById('button');
         const output = document.querySelector("p");
-        const guzik = document.getElementById('przycisk');
+        const button2= document.getElementById('przycisk');
         const color = document.getElementById('color');
-        button.addEventListener("click", zmianawysokosc);
-        button.addEventListener("click", changeColor);
+        button1.addEventListener("click", zmianawysokosc);
+        button2.addEventListener("click", changeColor);
 
         function zmianawysokosc(){
         const level = parseInt(wysokosc.value);
