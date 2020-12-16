@@ -7,33 +7,42 @@
     <title>Choinka JS</title>
 </head>
 <body>
-    <label for="wysokosc">Podaj wysokość choinki: <input type="text" name="wysokosc" id="wysokosc"></label>
-    <button id="color">Potwierdź</button>
+    <label for="wysokosc">Podaj wysokość choinki: <input type="text" name="wysokosc" id="wysokosc" value="12"></label>
+    <button id="button">Potwierdź</button>
+    <button id="color">Zmień kolor</button>
     <section><p></p></section>
 
     <script>
         
         const wysokosc = document.getElementById('wysokosc');
-        const button = document.getElementById('color');
+        const button = document.getElementById('button');
         const output = document.querySelector("p");
+        const color = document.getElementById('#color');
         button.addEventListener("click", zmianawysokosc);
-        
+        button.addEventListener("click", changeColor);
+
         function zmianawysokosc(){
         const level = parseInt(wysokosc.value);
         let tree = "";
         let d = 1;
+        let e = level;
         for(let a = 1; a <= level; a++){
-            for(let b = 1; b <= level; b++){
+            for(let b = 1; b <= e; b++){
                 tree += "&nbsp;";
+                console.log(level);
             }
             for(let c = 1; c <= d; c++){
                 tree += "*";
             }
             d=d+2;
-            tree += "<br>";         
+            tree += "<br>"; 
+            e = e - 1;        
         }
         output.innerHTML = tree;
-    }
+        }
+        function changeColor(){
+
+        }
     </script>
 
 </body>
