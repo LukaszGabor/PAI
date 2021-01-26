@@ -3,11 +3,12 @@ const age = document.getElementById('age');
 const color = document.getElementById('color');
 const button = document.getElementById('button');
 const result = document.getElementById('result');
+console.log(age);
 
 button.addEventListener('click', function(button){
 button.preventDefault();
 
-const tab = [...imie.value];
+const tab = [...name.value];
 
 for(let a = 0; a < tab.length; a++){
     if(!isNaN(tab[a])){
@@ -28,7 +29,7 @@ for(let a = 0; a < tab.length; a++){
             return 0;
         }
 
-        else if(color1[0]! = "#"){
+        else if(color1[0]!="#"){
             alert("Na początku musi być #");
             return 0;
         }
@@ -39,26 +40,26 @@ for(let a = 0; a < tab.length; a++){
         }
 
         else{
-            let age;
+            let wiek;
             
             if(age.value < 17 || age.value > 19){
-                age = "lat";
+                wiek = "lat";
             }
 
             else if(age.value == 17 || age.value == 19){
-                age = "roku";
+                wiek = "roku";
             }
 
             if(age.value > 18){
-                result.innerHTML = `Hejka ${imie.value}:) Jesteś posiadaczem pełnych praw od ${age.value - 18} ${age}!`;
+                result.innerHTML = `Hejka ${name.value}:) Jesteś posiadaczem pełnych praw od ${age.value - 18} ${age} lat`;
             }
 
             else if(age.value == 18){
-                result.innerHTML = `Siemka ${imie,value}:) Możesz robić wszysto`;
+                result.innerHTML = `Siemka ${name.value}:) Możesz robić wszystko`;
             }
 
             else{
-                result.innerHTML = `Hejoo ${imie.value}:) Do dorosłości na papierku brakuje ci ${18 - age.value}`;
+                result.innerHTML = `Hejoo ${name.value}:) Do dorosłości na papierku brakuje ci ${18 - age.value} lat`;
             }
 
             wynik.style.borderColor = color.value;
