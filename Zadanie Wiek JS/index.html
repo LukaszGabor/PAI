@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Łukasz">
-    <title>Powtórka JS</title>
+    <title>Zadanie JS powtórka</title>
 </head>
 <body>
-    <div class="container">
-        <form action="#">
-            <div class="przyciski">
-                <label for="#">Podaj imię: <input type="text" placeholder="Tu wpisz imię"></label>
-                <label for="#">Podaj wiek: <input type="number" min="1"></label>
-                <label for="#">Podaj kolor: <input type="text"></label>
-            </div>
-            <input type="submit" class="wykonaj" value="Wyślij!">
-        </form>
-        <p class="wynik"></p>
-    </div>
+    <form action="#">
+        Imię: <input type="text" id="imie">
+        Wiek: <input type="number" id="wiek">
+        <button onclick="przywitaj()">Wyślij formularz</button>
+        <br>
+        <p id="wynik"></p>
+        <script>
+        function przywitaj(){
+            let imie = document.getElementById("imie").value;
+            let wiek = document.getElementById("wiek").value;
+            let wynik = document.getElementById("wynik");
+            console.log(wynik);
+            
+            if(!imie){
+            wynik.innerHTML = "Podaj imię";
+            }
+            else if(!wiek){
+            wynik.innerHTML = "Podaj wiek";
+            }
+            else{
+            wynik.innerHTML = "Witaj " + imie + " obecnie masz " + wiek + "lat";
+            }
+        }
+        </script>
+    </form>
 </body>
 </html>
